@@ -4,6 +4,6 @@ public class Combination {
 
     private int combinationLength;
     private int combination [];
-    
+
 
 }
