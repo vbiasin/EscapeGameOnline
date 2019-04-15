@@ -2,7 +2,7 @@ package EscapeGameOnline;
 
 public class Combination {
 
-    private int combinationLength;
+    private int combinationLength; // will be define by parameter from xml file
     private int combination [];
 
     public Combination() {
