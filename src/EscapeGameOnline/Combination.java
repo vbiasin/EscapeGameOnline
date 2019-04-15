@@ -7,6 +7,10 @@ public class Combination {
 
     public Combination() {
         this.combinationLength=4;
+        this.combination = new int[this.combinationLength];
+        for(int i=0; i<this.combinationLength; i++){
+            this.combination[i] = randomFigure();
+        }
 
     }
 
@@ -31,10 +35,12 @@ public class Combination {
 
     /**
      * this function return a random number between 0 and 9 both included
-     * int number = (int)(Math.random() * (max+1-min)) + min;
-     * @return int
+     * @return int number
      */
      public int randomFigure(){
-         return -1;
+         int min = 0;
+         int max = 9;
+         int number = (int)(Math.random() * (max+1-min)) + min;
+         return number;
      }
 }
