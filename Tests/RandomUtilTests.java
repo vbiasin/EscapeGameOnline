@@ -1,12 +1,12 @@
+import EscapeGameOnline.Combination;
 import util.RandomUtil;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-
-
-
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import java.util.*;
 
 public class RandomUtilTests {
+
+    Combination mock = new Combination();
 
 
     /**
@@ -20,7 +20,5 @@ public class RandomUtilTests {
         }
 
     }
-
-
 
 }

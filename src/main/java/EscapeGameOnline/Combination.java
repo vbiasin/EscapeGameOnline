@@ -32,6 +32,16 @@ public class Combination {
         this.combination = combination;
     }
 
+    /**
+     * This function must compare two combinations
+     * Compare each number from Computer Combination with combination given by user.
+     * Show for each number if the user number is to big (-) or to small (+) or equal (=)
+     @parm Combination combination1, Combination combination2
+     */
+    public void  compareCombination(){
+
+    }
+
 
 
 }
