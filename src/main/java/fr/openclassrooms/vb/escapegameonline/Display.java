@@ -1,4 +1,4 @@
-package EscapeGameOnline;
+package fr.openclassrooms.vb.escapegameonline;
 
 public class Display {
 

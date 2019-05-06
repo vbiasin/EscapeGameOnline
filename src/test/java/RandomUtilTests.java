@@ -1,13 +1,12 @@
-import EscapeGameOnline.Combination;
-import util.RandomUtil;
+import fr.openclassrooms.vb.escapegameonline.Combination;
+import fr.openclassrooms.vb.util.RandomUtil;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import java.util.*;
+
 
 public class RandomUtilTests {
 
     Combination mock = new Combination();
-    Combination test = new Combination();
 
 
     /**

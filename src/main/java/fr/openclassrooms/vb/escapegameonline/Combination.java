@@ -1,15 +1,25 @@
-package EscapeGameOnline;
+package fr.openclassrooms.vb.escapegameonline;
 
-import util.RandomUtil;
+import fr.openclassrooms.vb.util.Property;
+import org.apache.logging.log4j.LogManager;
+import fr.openclassrooms.vb.util.RandomUtil;
+
+import java.util.Properties;
 
 
 public class Combination {
 
-    private int combinationLength; // will be define by parameter from xml file
+
+
+    private int combinationLength;
     private int combination [];
+    private Properties properties;
+
 
     public Combination() {
-        this.combinationLength=4;
+        properties = Property.getInstance();
+        combinationLength = Integer.parseInt(properties.getProperty("lengthOfCombination","4"));
+        LogManager.getLogger(Combination.class).debug("New Combination with length = " + this.combinationLength);
         this.combination = RandomUtil.generateCombination(this.combinationLength);
     }
 
@@ -36,9 +46,9 @@ public class Combination {
      * This function must compare two combinations
      * Compare each number from Computer Combination with combination given by user.
      * Show for each number if the user number is to big (-) or to small (+) or equal (=)
-     @parm Combination combination1, Combination combination2
+     @parm Combination combination
      */
-    public void  compareCombination(){
+    public void compareCombination(Combination combination){
 
     }
 

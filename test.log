@@ -1,0 +1,32 @@
+INFO  | 2019-04-25 18:54:47 | [main] Combination (Combination.java:14) - New Combination
+ERROR | 2019-04-25 18:56:49 | [main] Combination (Combination.java:14) - New Combination
+ERROR | 2019-04-25 19:09:11 | [main] EscapeGameOnline.Combination (Combination.java:14) - New Combination
+ERROR | 2019-04-25 19:10:16 | [main] EscapeGameOnline.Combination (Combination.java:14) - New Combination
+DEBUG | 2019-04-25 19:14:28 | [main] EscapeGameOnline.Combination (Combination.java:14) - New Combination
+DEBUG | 2019-04-25 19:14:28 | [main] util.RandomUtil (RandomUtil.java:24) - New Random Combination
+DEBUG | 2019-04-25 19:15:49 | [main] util.RandomUtil (RandomUtil.java:24) - New Random Combination
+ERROR | 2019-04-25 19:17:23 | [main] EscapeGameOnline.Combination (Combination.java:14) - New Combination
+DEBUG | 2019-04-25 19:17:23 | [main] util.RandomUtil (RandomUtil.java:24) - New Random Combination
+ERROR | 2019-05-02 18:40:14 | [main] escapegameonline.Combination (Combination.java:14) - New Combination
+DEBUG | 2019-05-02 18:40:15 | [main] util.RandomUtil (RandomUtil.java:23) - New Random Combination
+ERROR | 2019-05-02 18:47:49 | [main] escapegameonline.Combination (Combination.java:14) - New Combination
+DEBUG | 2019-05-02 18:47:49 | [main] util.RandomUtil (RandomUtil.java:23) - New Random Combination
+ERROR | 2019-05-02 18:58:31 | [main] escapegameonline.Combination (Combination.java:14) - New Combination
+DEBUG | 2019-05-02 18:58:31 | [main] util.RandomUtil (RandomUtil.java:23) - New Random Combination
+ERROR | 2019-05-02 18:59:27 | [main] escapegameonline.Combination (Combination.java:14) - New Combination
+DEBUG | 2019-05-02 18:59:27 | [main] util.RandomUtil (RandomUtil.java:23) - New Random Combination
+ERROR | 2019-05-02 18:59:42 | [main] escapegameonline.Combination (Combination.java:14) - New Combination
+DEBUG | 2019-05-02 18:59:42 | [main] util.RandomUtil (RandomUtil.java:23) - New Random Combination
+ERROR | 2019-05-02 19:01:47 | [main] escapegameonline.Combination (Combination.java:14) - New Combination
+DEBUG | 2019-05-02 19:01:47 | [main] util.RandomUtil (RandomUtil.java:23) - New Random Combination
+ERROR | 2019-05-02 19:02:43 | [main] escapegameonline.Combination (Combination.java:14) - New Combination
+DEBUG | 2019-05-02 19:02:43 | [main] util.RandomUtil (RandomUtil.java:23) - New Random Combination
+ERROR | 2019-05-06 19:40:37 | [main] escapegameonline.Combination (Combination.java:23) - New Combination
+DEBUG | 2019-05-06 19:40:37 | [main] util.RandomUtil (RandomUtil.java:23) - New Random Combination
+ERROR | 2019-05-06 19:41:29 | [main] escapegameonline.Combination (Combination.java:23) - New Combination
+DEBUG | 2019-05-06 19:41:29 | [main] util.RandomUtil (RandomUtil.java:23) - New Random Combination
+DEBUG | 2019-05-06 19:50:40 | [main] util.RandomUtil (RandomUtil.java:23) - New Random Combination
+DEBUG | 2019-05-06 19:52:01 | [main] escapegameonline.Combination (Combination.java:22) - New Combination length25
+DEBUG | 2019-05-06 19:52:01 | [main] util.RandomUtil (RandomUtil.java:23) - New Random Combination
+DEBUG | 2019-05-06 19:56:09 | [main] escapegameonline.Combination (Combination.java:22) - New Combination with length = 25
+DEBUG | 2019-05-06 19:56:09 | [main] util.RandomUtil (RandomUtil.java:23) - New Random Combination
