@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Configuration xmlns="http://logging.apache.org/log4j/2.0/config">
     <Properties>
-        <Property name="basePath">D:\Projets\JAVA\OpenClassroomsCours\EscapeGameOnline</Property>
+        <Property name="basePath">D:\Projets\JAVA\OpenClassroomsCours\EscapeGameOnline\logs</Property>
     </Properties>
     <Appenders>
         <!-- File Appender -->
@@ -15,6 +15,7 @@
     </Appenders>
     <Loggers>
         <Logger name="fr.openclassrooms.vb.util" level="debug" />
+        <Logger name="fr.openclassrooms.vb.util.Property" level="debug" />
         <Logger name="fr.openclassrooms.vb.escapegameonline" level="debug" />
         <Root level="info">
             <AppenderRef ref="STDOUT" />

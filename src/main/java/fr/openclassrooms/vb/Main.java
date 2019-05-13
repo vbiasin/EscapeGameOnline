@@ -1,22 +1,17 @@
 package fr.openclassrooms.vb;
 
-import java.util.Properties;
 
 import fr.openclassrooms.vb.escapegameonline.Combination;
-
-
-
-
+import fr.openclassrooms.vb.util.Property;
 
 public class Main {
 
     public static void main(String[] args) {
 
+        //Property.setDebug(("DEBUG".equals(args[0])));
+
         Combination test = new Combination();
 
-        /*for(int i=0; i<test.getCombinationLength(); i++){
-            System.out.println(test.getCombination()[i]);
-        }*/
 
     }
 
