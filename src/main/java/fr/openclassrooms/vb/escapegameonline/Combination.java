@@ -5,9 +5,9 @@ import fr.openclassrooms.vb.util.Property;
 import org.apache.logging.log4j.LogManager;
 import fr.openclassrooms.vb.util.RandomUtil;
 
+import java.util.InputMismatchException;
 import java.util.Properties;
-
-
+import java.util.Scanner;
 
 
 public class Combination {
@@ -68,10 +68,11 @@ public class Combination {
 
     /**
      * This function must check value at current position
+     * check if position exist
      * Check if value at position is between 0 and 9 included
      @parm int position
      */
-    public boolean checkCurrentNumber(int position)  {
+    public boolean checkCurrentNumber(int position) throws ArrayIndexOutOfBoundsException {
         boolean check = true;
         if(this.getCombination()[position]<0 || this.getCombination()[position]>9){
             check = false;
@@ -87,6 +88,28 @@ public class Combination {
      */
     public void setCombinationNumberAtPosition(int position, int value) throws  ArrayIndexOutOfBoundsException{
         this.combination[position] = value;
+    }
+
+    /**
+     * This function must generate a new combination with user entries
+     */
+    public void setCombinationFromScanner() {
+        int position = 0;
+        while (position < this.getCombinationLength()) {
+            try {
+                this.setCombinationNumberAtPosition(position, -1);
+                while (this.checkCurrentNumber(position) == false) {
+                    Scanner scan = new Scanner(System.in);
+                    System.out.println("Choose the " + position + 1 + " number of your combination !");
+                    this.setCombinationNumberAtPosition(position, scan.nextInt());
+                }
+                position = position++;
+            } catch (InputMismatchException e) {
+                LogManager.getLogger(Combination.class).error("You must enter an Integer !");
+            } catch (Exception e) {
+                LogManager.getLogger(Combination.class).error("An error has occured !");
+            }
+        }
     }
 
 
