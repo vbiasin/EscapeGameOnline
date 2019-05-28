@@ -62,4 +62,15 @@ public class Property {
 
             return length;
         }
+
+        public static int getNumberOfStrikes(){
+            int numberOfStrikes = Integer.parseInt(getInstance().getProperty("numberOfStrikes","20"));
+            if(numberOfStrikes<1){
+                LogManager.getLogger(Property.class).error("The number of strikes is negativ or null");
+                throw new IllegalArgumentException();
+
+            }
+
+        return numberOfStrikes;
+        }
 }
