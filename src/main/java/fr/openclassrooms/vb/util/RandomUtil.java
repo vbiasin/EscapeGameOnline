@@ -1,7 +1,5 @@
 package fr.openclassrooms.vb.util;
 
-import org.apache.logging.log4j.LogManager;
-
 public class RandomUtil {
 
 
@@ -20,7 +18,6 @@ public class RandomUtil {
      * this function return a random combination
      */
     public static int [] generateCombination(int length){
-        //LogManager.getLogger(RandomUtil.class).debug("New Random Combination");
         int combination[]= new int[length];
         for(int i=0; i<length; i++){
             combination[i] = randomFigure();
