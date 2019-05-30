@@ -9,7 +9,7 @@ import java.util.Scanner;
 
 public class Game {
 
-    private Combination combinationToFind;
+    private Combination combinationComputer;
     private Combination combinationPlayer = new Combination();
     private Display display = new Display();
     private  int numberOfStrike = Property.getNumberOfStrikes();
@@ -22,19 +22,19 @@ public class Game {
      * Run the ChallengerMod
      */
     public void challengerMod(){
-        combinationToFind = new Combination();
+        combinationComputer = new Combination();
 
 
         while (numberOfStrike>0){
             if(Property.isDebug()==true){
                 LogManager.getLogger(Game.class).debug("The number of strikes is : " + Property.getNumberOfStrikes());
                 LogManager.getLogger(Game.class).debug("The Combination is : " );
-                display.displayCombination(combinationToFind);
+                display.displayCombination(combinationComputer);
             }
             combinationPlayer.setCombinationFromScanner();
-            combinationToFind.compareCombination(combinationPlayer);
-            display.displayCompartorOfCombination(combinationToFind);
-            if(combinationToFind.isTrue()){
+            combinationComputer.compareCombination(combinationPlayer);
+            display.displayCompartorOfCombination(combinationComputer);
+            if(combinationComputer.isTrue()){
                 System.out.println("Player WIN");
                 numberOfStrike=-1;
             }
@@ -43,12 +43,35 @@ public class Game {
 
         if(numberOfStrike==0){
             System.out.println("Computer WIN !");
-            display.displayCombination(combinationToFind);
+            display.displayCombination(combinationPlayer);
         }
 
     }
 
     public void defenderMod(){
+
+        combinationPlayer.setCombinationFromScanner();
+
+        while (numberOfStrike>0){
+            if(Property.isDebug()==true){
+                LogManager.getLogger(Game.class).debug("The number of strikes is : " + Property.getNumberOfStrikes());
+                LogManager.getLogger(Game.class).debug("The Combination is : " );
+                display.displayCombination(combinationPlayer);
+            }
+            combinationComputer=new Combination();
+            combinationComputer.compareCombination(combinationPlayer);
+            display.displayCompartorOfCombination(combinationComputer);
+            if(combinationPlayer.isTrue()){
+                System.out.println("Computer WIN");
+                numberOfStrike=-1;
+            }
+            numberOfStrike--;
+        }
+
+        if(numberOfStrike==0){
+            System.out.println("Player WIN !");
+            display.displayCombination(combinationPlayer);
+        }
 
     }
 
