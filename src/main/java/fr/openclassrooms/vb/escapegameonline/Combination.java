@@ -75,6 +75,15 @@ public class Combination {
     }
 
     /**
+     * This function put an operator at the position check value at current position
+     * generate exception if position don't exist
+     @parm int position ; String value
+     */
+    public void setOperatorAtPosition(int position, String value) throws  ArrayIndexOutOfBoundsException{
+        this.operator[position] = value;
+    }
+
+    /**
      * This function must generate a new combination with user entries
      */
     public void setCombinationFromScanner() {
@@ -134,27 +143,47 @@ public class Combination {
         return check;
     }
 
+
     /**
-     * This function must check all values of the operators tab
+     * with this fuction it's possible for the player to compare the computer combination with the own combination
+     * and say to computer + if more, - if less = if the computer find the number at the position.
      */
-    public boolean checkOperatorTab(){
-        boolean check = false;
-        for(int i = 0; i<this.combinationLength; i++){
+    public void setOperatorTabFromScanner(){
+        int position = 0;
+        boolean stopScan=false;
+        while (position < this.combinationLength) {
             try {
-                check = checkOperatorSymbolAtPosition(i);
-            }
-            catch(ArrayIndexOutOfBoundsException e ){
-                LogManager.getLogger(Combination.class).error("Your position is not define !"+ e.getStackTrace());
-            }
-            catch (Exception e) {
+                if(Property.isDebug()==true){
+                    LogManager.getLogger(Combination.class).debug("Current position ! " + position);
+                }
+                this.setOperatorAtPosition(position, null);
+                while ( stopScan == false) {
+                    Scanner scan = new Scanner(System.in);
+                    System.out.println("Please give the operator of the " + (position + 1) + " number of your combination!");
+                    try{
+                        this.setOperatorAtPosition(position, scan.next());
+                        stopScan=this.checkOperatorSymbolAtPosition(position);
+                        if(Property.isDebug()==true){
+                            LogManager.getLogger(Combination.class).debug("Value at Current position ! " + getCombination()[position]);
+                            LogManager.getLogger(Combination.class).debug("Value of stopScan ! " + stopScan);
+                        }
+                    }
+                    catch(ArrayIndexOutOfBoundsException e ){
+                        LogManager.getLogger(Combination.class).error("Your position is not define !"+ e.getStackTrace());
+                    }
+                }
+
+            } catch (Exception e) {
                 LogManager.getLogger(Combination.class).error("An error has occured !" + e.getStackTrace());
             }
-
+            stopScan = false;
+            position++;
+            if (Property.isDebug()==true){
+                LogManager.getLogger(Combination.class).debug("Value of position ! " + position);
+                LogManager.getLogger(Combination.class).debug("Value of stopScan ! " + stopScan);
+            }
         }
-        return check;
     }
-
-    //public void setOperatorTabFromScanner
 
 
     /**
