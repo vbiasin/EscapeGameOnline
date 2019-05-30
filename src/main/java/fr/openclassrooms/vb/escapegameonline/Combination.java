@@ -149,6 +149,7 @@ public class Combination {
      * and say to computer + if more, - if less = if the computer find the number at the position.
      */
     public void setOperatorTabFromScanner(){
+        this.display.displayOperatorForCompare();
         int position = 0;
         boolean stopScan=false;
         while (position < this.combinationLength) {

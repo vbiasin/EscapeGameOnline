@@ -36,6 +36,12 @@ public class Display {
         System.out.println();
     }
 
+    public void displayOperatorForCompare(){
+        System.out.println("Enter + if the computer give a number smaller than the number of your combination !");
+        System.out.println("Enter - if the computer give a number bigger than the number of your combination !");
+        System.out.println("Enter + if the computer give the same number than the number of your combination !");
+    }
+
 
 
 
