@@ -48,9 +48,15 @@ public class Game {
 
     }
 
+
+    /**
+     * Run the defenderMod
+     */
     public void defenderMod(){
 
+        Computer computer = new Computer();
         combinationPlayer.setCombinationFromScanner();
+        computer.setComputerCombination(new Combination());
 
         while (numberOfStrike>0){
             if(Property.isDebug()==true){
@@ -58,14 +64,15 @@ public class Game {
                 LogManager.getLogger(Game.class).debug("The Combination is : " );
                 display.displayCombination(combinationPlayer);
             }
-            combinationComputer=new Combination();
-            combinationComputer.compareCombination(combinationPlayer);
-            display.displayCompartorOfCombination(combinationComputer);
+
+            combinationPlayer.setOperatorTabFromScanner();
+
             if(combinationPlayer.isTrue()){
                 System.out.println("Computer WIN");
                 numberOfStrike=-1;
             }
             numberOfStrike--;
+            computer.resloveCombination(combinationPlayer);
         }
 
         if(numberOfStrike==0){
@@ -75,9 +82,16 @@ public class Game {
 
     }
 
+
+    /**
+     * Run the duelMod
+     */
     public void duelMod(){
 
     }
+
+
+
 
     /**
      * player choose the game mod or exit the program.
@@ -150,6 +164,10 @@ public class Game {
         else {
             duelMod();
         }
+    }
+
+    public void continuFromScanner(){
+
     }
 
 

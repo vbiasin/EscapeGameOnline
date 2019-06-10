@@ -1,44 +1,98 @@
 package fr.openclassrooms.vb.escapegameonline;
 
 
+import fr.openclassrooms.vb.util.Property;
+import org.apache.logging.log4j.LogManager;
+
 public class Computer {
 
-    private int middle;
-    private int min;
-    private int max;
+    private int min = 0;
+    private int max = 0;
+    private Combination computerCombination;
 
-    public Computer(Combination combination) {
-        this.min = 0;
-        this.max = combination.getCombinationLength() ;
-        this.middle = (min+max)/2;
+    public Computer() {
+
     }
 
     /**
-     * Getters and Setters from Attributs of Class
+     * Getters and Setters from usefull Attributs of Class
      */
-    public int getMiddle() {
-        return middle;
+
+
+    public Combination getComputerCombination() {
+        return computerCombination;
     }
 
-    public void setMiddle(int middle) {
-        this.middle = middle;
+    public void setComputerCombination(Combination computerCombination) {
+        this.computerCombination = computerCombination;
     }
 
-    public int getMin() {
-        return min;
+
+    /**
+     * This function must find the number of the current position
+     * this function use the algorithm of dichotomie
+     @parm Combination combination, int position
+     */
+    public void resolveNumberAtPosition(int position, Combination playerCombination){
+        int oldValue = 0;
+        int newValue = 0;
+        if(Property.isDebug()==true){
+            LogManager.getLogger(Computer.class).debug("Current min " + this.min);
+            LogManager.getLogger(Computer.class).debug("Current max " + this.max);
+        }
+        try {
+
+            oldValue = this.getComputerCombination().getValueAtposition(position);
+        }
+        catch(ArrayIndexOutOfBoundsException e ){
+            LogManager.getLogger(Computer.class).error("Your position is not define !"+ e.getStackTrace());
+        }
+
+        if(playerCombination.getOperator()[position].equals("=")){
+            newValue = oldValue;
+        }
+        else if(playerCombination.getOperator()[position].equals("+")){
+            this.max=9;
+            this.min=oldValue;
+        }
+        else{
+            this.max=oldValue;
+            this.min=0;
+        }
+
+        newValue = (this.min + this.max) / 2;
+
+        try {
+            this.getComputerCombination().setCombinationNumberAtPosition(position,newValue);
+        }
+        catch(ArrayIndexOutOfBoundsException e ){
+            LogManager.getLogger(Computer.class).error("Your position is not define !"+ e.getStackTrace());
+        }
+
+        if(Property.isDebug()==true){
+            LogManager.getLogger(Computer.class).debug("Current operator " + playerCombination.getOperator()[position]);
+            LogManager.getLogger(Computer.class).debug("Current min " + this.min);
+            LogManager.getLogger(Computer.class).debug("Current max " + this.max);
+            LogManager.getLogger(Computer.class).debug("Current oldValue " + oldValue);
+            LogManager.getLogger(Computer.class).debug("Current newValue " + newValue);
+        }
+
     }
 
-    public void setMin(int min) {
-        this.min = min;
+
+
+    /**
+     * This function resolve the combination
+     @parm Combination combination
+     */
+    public void resloveCombination(Combination playerCombination){
+        for(int i=0; i<this.getComputerCombination().getCombinationLength(); i++){
+            resolveNumberAtPosition(i,playerCombination);
+        }
+
     }
 
-    public int getMax() {
-        return max;
-    }
 
-    public void setMax(int max) {
-        this.max = max;
-    }
 
 
 

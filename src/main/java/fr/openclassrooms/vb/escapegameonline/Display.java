@@ -21,7 +21,7 @@ public class Display {
      */
     public void displayCompartorOfCombination(Combination combination){
         for(int i = 0; i<combination.getCombinationLength(); i++){
-            System.out.print(combination.getOperator()[i]);
+            System.out.print(" "+combination.getOperator()[i]+" ");
         }
         System.out.println();
     }
@@ -40,6 +40,12 @@ public class Display {
         System.out.println("Enter + if the computer give a number smaller than the number of your combination !");
         System.out.println("Enter - if the computer give a number bigger than the number of your combination !");
         System.out.println("Enter + if the computer give the same number than the number of your combination !");
+    }
+
+    public void displayEndGame(){
+        System.out.println("Enter 1) if you want to play again in the same mod !");
+        System.out.println("Enter 2) if you want to go back to game menu !");
+        System.out.println("Enter 3) if you want to exit the application!");
     }
 
 

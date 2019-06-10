@@ -66,6 +66,15 @@ public class Combination {
     }
 
     /**
+     * This function return the value
+     * generate exception if position don't exist
+     @parm int position
+     */
+    public int getValueAtposition(int position)throws  ArrayIndexOutOfBoundsException{
+        return this.combination[position];
+    }
+
+    /**
      * This function put a value at the position check value at current position
      * generate exception if position don't exist
      @parm int position ; int value
@@ -201,13 +210,13 @@ public class Combination {
         }
         for (int i = 0; i < this.combinationLength; i++){
             if(this.combination[i] == combinationToCompare.getCombination()[i]){
-                this.operator[i]= " = ";
+                this.operator[i]= "=";
             }
             else if (this.combination[i] < combinationToCompare.getCombination()[i]){
-                this.operator[i]= " - ";
+                this.operator[i]= "-";
             }
             else{
-                this.operator[i]= " + ";
+                this.operator[i]= "+";
             }
         }
     }
@@ -215,7 +224,7 @@ public class Combination {
     /**
      * This function check if combination is true after compare
      * Compare each operator
-     * Sreturn false if there is an operator which is different of =
+     * return false if there is an operator which is different of =
      */
     public boolean isTrue (){
         boolean check =true;
