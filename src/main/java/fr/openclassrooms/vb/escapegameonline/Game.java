@@ -167,7 +167,18 @@ public class Game {
     }
 
     public void continuFromScanner(){
-
+        int choice = 0;
+        display.displayEndGame();
+        try {
+            Scanner scan = new Scanner(System.in);
+            choice = scan.nextInt();
+        }
+        catch (InputMismatchException e) {
+            LogManager.getLogger(Game.class).error("You must enter 1 or 2 or 3 !" + e.getStackTrace());
+        } catch (Exception e) {
+            LogManager.getLogger(Game.class).error("An error has occured !" + e.getStackTrace());
+            System.out.println();
+        }
     }
 
 

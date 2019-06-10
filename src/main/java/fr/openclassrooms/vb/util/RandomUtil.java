@@ -1,5 +1,7 @@
 package fr.openclassrooms.vb.util;
 
+import fr.openclassrooms.vb.escapegameonline.Constants;
+
 public class RandomUtil {
 
 
@@ -8,8 +10,8 @@ public class RandomUtil {
      * @return int number
      */
     public static int randomFigure(){
-        int min = 0;
-        int max = 9;
+        int min = Constants.MIN;
+        int max = Constants.MAX;
         int number = (int)(Math.random() * (max+1-min)) + min;
         return number;
     }

@@ -4,10 +4,12 @@ package fr.openclassrooms.vb.escapegameonline;
 import fr.openclassrooms.vb.util.Property;
 import org.apache.logging.log4j.LogManager;
 
+
+
 public class Computer {
 
-    private int min = 0;
-    private int max = 0;
+    private int min = Constants.MIN;
+    private int max = Constants.MIN;
     private Combination computerCombination;
 
     public Computer() {
@@ -48,16 +50,16 @@ public class Computer {
             LogManager.getLogger(Computer.class).error("Your position is not define !"+ e.getStackTrace());
         }
 
-        if(playerCombination.getOperator()[position].equals("=")){
+        if(Constants.EQUALS.equals(playerCombination.getOperator()[position])){
             newValue = oldValue;
         }
-        else if(playerCombination.getOperator()[position].equals("+")){
-            this.max=9;
+        else if(Constants.PLUS.equals(playerCombination.getOperator()[position])){
+            this.max=Constants.MAX;
             this.min=oldValue;
         }
         else{
             this.max=oldValue;
-            this.min=0;
+            this.min=Constants.MIN;
         }
 
         newValue = (this.min + this.max) / 2;

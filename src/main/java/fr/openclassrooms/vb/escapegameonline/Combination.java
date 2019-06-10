@@ -58,7 +58,7 @@ public class Combination {
     public boolean checkCurrentNumber(int position) throws ArrayIndexOutOfBoundsException {
         boolean check = true;
 
-        if(this.getCombination()[position]<0 || this.getCombination()[position]>9){
+        if(this.getCombination()[position]<Constants.MIN || this.getCombination()[position]>Constants.MAX){
             check = false;
         }
         return check;
@@ -143,7 +143,8 @@ public class Combination {
      */
     public boolean checkOperatorSymbolAtPosition(int position)  throws  ArrayIndexOutOfBoundsException{
         boolean check = false;
-        if(this.operator[position].equals("+") || this.operator[position].equals("-") || this.operator[position].equals("=")){
+        if(Constants.EQUALS.equals(this.operator[position])
+                || Constants.MINUS.equals(this.operator[position]) || Constants.PLUS.equals(this.operator[position])){
             check=true;
         }
         else{
@@ -210,13 +211,13 @@ public class Combination {
         }
         for (int i = 0; i < this.combinationLength; i++){
             if(this.combination[i] == combinationToCompare.getCombination()[i]){
-                this.operator[i]= "=";
+                this.operator[i]= Constants.EQUALS;
             }
             else if (this.combination[i] < combinationToCompare.getCombination()[i]){
-                this.operator[i]= "-";
+                this.operator[i]= Constants.MINUS;
             }
             else{
-                this.operator[i]= "+";
+                this.operator[i]= Constants.PLUS;
             }
         }
     }
