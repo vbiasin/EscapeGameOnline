@@ -2,8 +2,6 @@ package fr.openclassrooms.vb.escapegameonline;
 
 public class Display {
 
-
-
     /**
      * Display all Play Mods avaible and exit option.
      */
@@ -42,13 +40,12 @@ public class Display {
         System.out.println("Enter + if the computer give the same number than the number of your combination !");
     }
 
+    /**
+     * Display end choices.
+     */
     public void displayEndGame(){
         System.out.println("Enter 1) if you want to play again in the same mod !");
         System.out.println("Enter 2) if you want to go back to game menu !");
         System.out.println("Enter 3) if you want to exit the application!");
     }
-
-
-
-
 }

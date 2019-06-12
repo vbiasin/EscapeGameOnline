@@ -1,10 +1,7 @@
 package fr.openclassrooms.vb.escapegameonline;
 
-
 import fr.openclassrooms.vb.util.Property;
 import org.apache.logging.log4j.LogManager;
-
-
 
 public class Computer {
 
@@ -19,8 +16,6 @@ public class Computer {
     /**
      * Getters and Setters from usefull Attributs of Class
      */
-
-
     public Combination getComputerCombination() {
         return computerCombination;
     }
@@ -28,7 +23,6 @@ public class Computer {
     public void setComputerCombination(Combination computerCombination) {
         this.computerCombination = computerCombination;
     }
-
 
     /**
      * This function must find the number of the current position
@@ -43,7 +37,6 @@ public class Computer {
             LogManager.getLogger(Computer.class).debug("Current max " + this.max);
         }
         try {
-
             oldValue = this.getComputerCombination().getValueAtposition(position);
         }
         catch(ArrayIndexOutOfBoundsException e ){
@@ -81,8 +74,6 @@ public class Computer {
 
     }
 
-
-
     /**
      * This function resolve the combination
      @parm Combination combination
@@ -91,12 +82,6 @@ public class Computer {
         for(int i=0; i<this.getComputerCombination().getCombinationLength(); i++){
             resolveNumberAtPosition(i,playerCombination);
         }
-
     }
-
-
-
-
-
 
 }

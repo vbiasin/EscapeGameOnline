@@ -2,9 +2,7 @@ package fr.openclassrooms.vb.escapegameonline;
 
 import fr.openclassrooms.vb.util.Property;
 import org.apache.logging.log4j.LogManager;
-
 import java.util.InputMismatchException;
-
 import java.util.Scanner;
 
 public class Game {
@@ -14,7 +12,6 @@ public class Game {
     private Display display = new Display();
     private  int numberOfStrike = Property.getNumberOfStrikes();
 
-
     public Game() {
     }
 
@@ -23,8 +20,6 @@ public class Game {
      */
     public void challengerMod(){
         combinationComputer = new Combination();
-
-
         while (numberOfStrike>0){
             if(Property.isDebug()==true){
                 LogManager.getLogger(Game.class).debug("The number of strikes is : " + Property.getNumberOfStrikes());
@@ -40,33 +35,26 @@ public class Game {
             }
             numberOfStrike--;
         }
-
         if(numberOfStrike==0){
             System.out.println("Computer WIN !");
             display.displayCombination(combinationPlayer);
         }
-
     }
-
 
     /**
      * Run the defenderMod
      */
     public void defenderMod(){
-
         Computer computer = new Computer();
         combinationPlayer.setCombinationFromScanner();
         computer.setComputerCombination(new Combination());
-
         while (numberOfStrike>0){
             if(Property.isDebug()==true){
                 LogManager.getLogger(Game.class).debug("The number of strikes is : " + Property.getNumberOfStrikes());
                 LogManager.getLogger(Game.class).debug("The Combination is : " );
                 display.displayCombination(combinationPlayer);
             }
-
             combinationPlayer.setOperatorTabFromScanner();
-
             if(combinationPlayer.isTrue()){
                 System.out.println("Computer WIN");
                 numberOfStrike=-1;
@@ -74,14 +62,11 @@ public class Game {
             numberOfStrike--;
             computer.resloveCombination(combinationPlayer);
         }
-
         if(numberOfStrike==0){
             System.out.println("Player WIN !");
             display.displayCombination(combinationPlayer);
         }
-
     }
-
 
     /**
      * Run the duelMod
@@ -89,9 +74,6 @@ public class Game {
     public void duelMod(){
 
     }
-
-
-
 
     /**
      * player choose the game mod or exit the program.
@@ -148,7 +130,6 @@ public class Game {
         return current_mod;
     }
 
-
     /**
      * Run mode in function of value given in parameter
      * return current MOD 1 for challenger, 2 for defender and 3 for versus
@@ -180,9 +161,5 @@ public class Game {
             System.out.println();
         }
     }
-
-
-
-
 
 }

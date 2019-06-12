@@ -1,6 +1,5 @@
 package fr.openclassrooms.vb.util;
 
-import fr.openclassrooms.vb.escapegameonline.Combination;
 import org.apache.logging.log4j.LogManager;
 
 import java.io.FileInputStream;
@@ -41,7 +40,6 @@ public class Property {
             } finally {
                 input.close();
             }
-
         }
 
         public static boolean isDebug() {

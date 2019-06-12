@@ -4,7 +4,6 @@ import fr.openclassrooms.vb.escapegameonline.Constants;
 
 public class RandomUtil {
 
-
     /**
      * this function return a random number between 0 and 9 both included
      * @return int number
