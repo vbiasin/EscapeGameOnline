@@ -147,19 +147,40 @@ public class Game {
         }
     }
 
-    public void continuFromScanner(){
+    public boolean continuFromScanner(int current_mod){
+        boolean isChoiceValid = false;
         int choice = 0;
         display.displayEndGame();
-        try {
-            Scanner scan = new Scanner(System.in);
-            choice = scan.nextInt();
+        while(isChoiceValid==false){
+            try {
+                Scanner scan = new Scanner(System.in);
+                choice = scan.nextInt();
+            }
+            catch (InputMismatchException e) {
+                LogManager.getLogger(Game.class).error("You must enter 1 or 2 or 3 !" + e.getStackTrace());
+            } catch (Exception e) {
+                LogManager.getLogger(Game.class).error("An error has occured !" + e.getStackTrace());
+                System.out.println();
+            }
+            switch (choice) {
+                case 1:
+                    runGameFromValue(current_mod);
+                    isChoiceValid = true;
+                    break;
+
+                case 2:
+                    current_mod = this.getModFromScanner();
+                    isChoiceValid = true;
+
+                case 3:
+                    System.exit(0);
+
+                default:
+                    System.out.println("You must enter 1 or 2 or 3 !");
+
+            }
         }
-        catch (InputMismatchException e) {
-            LogManager.getLogger(Game.class).error("You must enter 1 or 2 or 3 !" + e.getStackTrace());
-        } catch (Exception e) {
-            LogManager.getLogger(Game.class).error("An error has occured !" + e.getStackTrace());
-            System.out.println();
-        }
+        return true;
     }
 
 }

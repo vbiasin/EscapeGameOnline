@@ -17,8 +17,12 @@ public class Main {
         }
 
             Game game = new Game();
+            boolean continu =true;
             int current_mod = game.getModFromScanner();
             game.runGameFromValue(current_mod);
+            while (continu==true){
+                continu=game.continuFromScanner(current_mod);
+            }
     }
 }
 
