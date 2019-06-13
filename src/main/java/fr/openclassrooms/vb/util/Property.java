@@ -17,7 +17,7 @@ public class Property {
         public  static Properties getInstance(){
             if(properties==null){
                 try {
-                    properties = load("../config.properties");
+                    properties = load("./config.properties");
                 } catch (IOException e) {
                     e.printStackTrace();
                 }

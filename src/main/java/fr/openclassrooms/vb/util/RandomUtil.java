@@ -6,7 +6,7 @@ public class RandomUtil {
 
     /**
      * this function return a random number between 0 and 9 both included
-     * @return int number
+     * @return  number
      */
     public static int randomFigure(){
         int min = Constants.MIN;

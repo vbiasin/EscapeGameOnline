@@ -27,7 +27,8 @@ public class Computer {
     /**
      * This function must find the number of the current position
      * this function use the algorithm of dichotomie
-     @parm Combination combination, int position
+     @param  playerCombination
+     @param position
      */
     public void resolveNumberAtPosition(int position, Combination playerCombination){
         int oldValue = 0;
@@ -76,7 +77,7 @@ public class Computer {
 
     /**
      * This function resolve the combination
-     @parm Combination combination
+     @param  playerCombination
      */
     public void resloveCombination(Combination playerCombination){
         for(int i=0; i<this.getComputerCombination().getCombinationLength(); i++){

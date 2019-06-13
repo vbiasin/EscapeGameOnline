@@ -77,7 +77,7 @@ public class Game {
 
     /**
      * player choose the game mod or exit the program.
-     * return current MOD 1 for challenger, 2 for defender and 3 for versus
+     @return current MOD 1 for challenger, 2 for defender and 3 for versus
      */
     public int getModFromScanner(){
          boolean isChoiceValid = false;
@@ -107,7 +107,7 @@ public class Game {
                     case 3:
                         current_mod=3;
                         if (Property.isDebug()==true){
-                            LogManager.getLogger(Game.class).debug("You choose the versus mod !" );
+                            LogManager.getLogger(Game.class).debug("You choose the duel mod !" );
                         }
                         isChoiceValid = true;
                         break;
@@ -133,7 +133,7 @@ public class Game {
     /**
      * Run mode in function of value given in parameter
      * return current MOD 1 for challenger, 2 for defender and 3 for versus
-     * @ int value
+     * @param  value
      */
     public void runGameFromValue(int value){
         if (value == 1){
@@ -147,6 +147,11 @@ public class Game {
         }
     }
 
+    /**
+     * Run application in function of value given by Scanner
+     @param  current_mod
+     @return always true
+     */
     public boolean continuFromScanner(int current_mod){
         boolean isChoiceValid = false;
         int choice = 0;

@@ -45,7 +45,8 @@ public class Combination {
      * This function must check value at current position
      * generate exception if position don't exist
      * Check if value at position is between 0 and 9 included
-     @parm int position
+     @param position
+     @return check
      */
     public boolean checkCurrentNumber(int position) throws ArrayIndexOutOfBoundsException {
         boolean check = true;
@@ -58,7 +59,8 @@ public class Combination {
     /**
      * This function return the value
      * generate exception if position don't exist
-     @parm int position
+     @param  position
+     @return value (int) at position
      */
     public int getValueAtposition(int position)throws  ArrayIndexOutOfBoundsException{
         return this.combination[position];
@@ -67,7 +69,8 @@ public class Combination {
     /**
      * This function put a value at the position check value at current position
      * generate exception if position don't exist
-     @parm int position ; int value
+     @param  position
+     @param value
      */
     public void setCombinationNumberAtPosition(int position, int value) throws  ArrayIndexOutOfBoundsException{
         this.combination[position] = value;
@@ -76,7 +79,8 @@ public class Combination {
     /**
      * This function put an operator at the position check value at current position
      * generate exception if position don't exist
-     @parm int position ; String value
+     @param  position ;
+     @param  value
      */
     public void setOperatorAtPosition(int position, String value) throws  ArrayIndexOutOfBoundsException{
         this.operator[position] = value;
@@ -130,7 +134,8 @@ public class Combination {
      * This function must check value at current position
      * generate exception if position don't exist
      * Check if value at position is correctly defined
-     @parm int position
+     @param  position
+     @return check
      */
     public boolean checkOperatorSymbolAtPosition(int position)  throws  ArrayIndexOutOfBoundsException{
         boolean check = false;
@@ -194,7 +199,7 @@ public class Combination {
      * Compare each number from Computer Combination with combination given by user.
      * Show for each number if the user number is to big (-) or to small (+) or equal (=)
      * this function
-     @parm Combination combination
+     @param  combinationToCompare
      */
     public void compareCombination(Combination combinationToCompare){
         if(Property.isDebug()==true){
@@ -218,6 +223,7 @@ public class Combination {
      * This function check if combination is true after compare
      * Compare each operator
      * return false if there is an operator which is different of =
+     @return check
      */
     public boolean isTrue (){
         boolean check =true;
