@@ -1,6 +1,6 @@
 package fr.openclassrooms.vb;
 
-import fr.openclassrooms.vb.escapegameonline.Game;
+import fr.openclassrooms.vb.escapegameonline.Game.Game;
 
 public class Main {
 
