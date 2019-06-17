@@ -1,7 +1,7 @@
 package fr.openclassrooms.vb.util;
 
 import org.apache.logging.log4j.LogManager;
-
+import org.apache.logging.log4j.Logger;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -11,8 +11,7 @@ import java.util.Properties;
 public class Property {
 
         private  static Properties properties;
-
-        private static boolean debug;
+        private static Logger log = LogManager.getLogger(Property.class);
 
         public  static Properties getInstance(){
             if(properties==null){
@@ -42,18 +41,10 @@ public class Property {
             }
         }
 
-        public static boolean isDebug() {
-            return debug;
-        }
-
-        public static void setDebug(boolean debug) {
-            Property.debug = debug;
-        }
-
         public static int getLengthOfCombination(){
             int length = Integer.parseInt(getInstance().getProperty("lengthOfCombination","4"));
             if(length<1){
-                LogManager.getLogger(Property.class).error("New Combination with negativ or null length ");
+                log.error("New Combination with negativ or null length ");
                 throw new IllegalArgumentException();
 
             }
@@ -64,11 +55,11 @@ public class Property {
         public static int getNumberOfStrikes(){
             int numberOfStrikes = Integer.parseInt(getInstance().getProperty("numberOfStrikes","20"));
             if(numberOfStrikes<1){
-                LogManager.getLogger(Property.class).error("The number of strikes is negativ or null");
+                log.error("The number of strikes is negativ or null");
                 throw new IllegalArgumentException();
 
             }
-
         return numberOfStrikes;
         }
+
 }

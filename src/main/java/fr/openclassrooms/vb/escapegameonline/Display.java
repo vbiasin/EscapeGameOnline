@@ -2,16 +2,20 @@ package fr.openclassrooms.vb.escapegameonline;
 
 public class Display {
 
+    public void writeInConsole(String text){
+        System.out.println(text);
+    }
+
     /**
      * Display all Play Mods avaible and exit option.
      */
     public  void displayPlayMod(){
 
-        System.out.println("1) Challenger (Find the combination chosen by the computer) ");
-        System.out.println("2) Defender (The computer will try to find the combination chosen by the you) ");
-        System.out.println("3) Duel (Find combination chosen by the computer before he finds yours) ");
-        System.out.println("4) Exit application");
-        System.out.println("Make your choice and press Enter to validate !");
+        writeInConsole("1) Challenger (Find the combination chosen by the computer) ");
+        writeInConsole("2) Defender (The computer will try to find the combination chosen by the you) ");
+        writeInConsole("3) Duel (Find combination chosen by the computer before he finds yours) ");
+        writeInConsole("4) Exit application");
+        writeInConsole("Make your choice and press Enter to validate !");
     }
 
     /**
@@ -19,9 +23,9 @@ public class Display {
      */
     public void displayCompartorOfCombination(Combination combination){
         for(int i = 0; i<combination.getCombinationLength(); i++){
-            System.out.print(" "+combination.getOperator()[i]+" ");
+            writeInConsole(" "+combination.getOperator()[i]+" ");
         }
-        System.out.println();
+        writeInConsole("\n");
     }
 
     /**
@@ -29,23 +33,23 @@ public class Display {
      */
     public void displayCombination(Combination combination){
         for(int i = 0; i<combination.getCombinationLength(); i++){
-            System.out.print(combination.getCombination()[i]);
+            writeInConsole(String.valueOf(combination.getCombination()[i]));
         }
-        System.out.println();
+        writeInConsole("\n");
     }
 
     public void displayOperatorForCompare(){
-        System.out.println("Enter + if the computer give a number smaller than the number of your combination !");
-        System.out.println("Enter - if the computer give a number bigger than the number of your combination !");
-        System.out.println("Enter + if the computer give the same number than the number of your combination !");
+        writeInConsole("Enter + if the computer give a number smaller than the number of your combination !");
+        writeInConsole("Enter - if the computer give a number bigger than the number of your combination !");
+        writeInConsole("Enter + if the computer give the same number than the number of your combination !");
     }
 
     /**
      * Display end choices.
      */
     public void displayEndGame(){
-        System.out.println("Enter 1) if you want to play again in the same mod !");
-        System.out.println("Enter 2) if you want to go back to game menu !");
-        System.out.println("Enter 3) if you want to exit the application!");
+        writeInConsole("Enter 1) if you want to play again in the same mod !");
+        writeInConsole("Enter 2) if you want to go back to game menu !");
+        writeInConsole("Enter 3) if you want to exit the application!");
     }
 }

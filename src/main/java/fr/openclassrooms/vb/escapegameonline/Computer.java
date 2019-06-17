@@ -1,13 +1,14 @@
 package fr.openclassrooms.vb.escapegameonline;
 
-import fr.openclassrooms.vb.util.Property;
 import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 public class Computer {
 
     private int min = Constants.MIN;
     private int max = Constants.MIN;
     private Combination computerCombination;
+    private static Logger log = LogManager.getLogger(Computer.class);
 
     public Computer() {
 
@@ -33,10 +34,9 @@ public class Computer {
     public void resolveNumberAtPosition(int position, Combination playerCombination){
         int oldValue = 0;
         int newValue = 0;
-        if(Property.isDebug()==true){
-            LogManager.getLogger(Computer.class).debug("Current min " + this.min);
-            LogManager.getLogger(Computer.class).debug("Current max " + this.max);
-        }
+        log.debug("Current min " + this.min);
+        log.debug("Current max " + this.max);
+
         try {
             oldValue = this.getComputerCombination().getValueAtposition(position);
         }
@@ -62,17 +62,14 @@ public class Computer {
             this.getComputerCombination().setCombinationNumberAtPosition(position,newValue);
         }
         catch(ArrayIndexOutOfBoundsException e ){
-            LogManager.getLogger(Computer.class).error("Your position is not define !"+ e.getStackTrace());
+            log.error("Your position is not define !"+ e.getStackTrace());
         }
 
-        if(Property.isDebug()==true){
-            LogManager.getLogger(Computer.class).debug("Current operator " + playerCombination.getOperator()[position]);
-            LogManager.getLogger(Computer.class).debug("Current min " + this.min);
-            LogManager.getLogger(Computer.class).debug("Current max " + this.max);
-            LogManager.getLogger(Computer.class).debug("Current oldValue " + oldValue);
-            LogManager.getLogger(Computer.class).debug("Current newValue " + newValue);
-        }
-
+        log.debug("Current operator " + playerCombination.getOperator()[position]);
+        log.debug("Current min " + this.min);
+        log.debug("Current max " + this.max);
+        log.debug("Current oldValue " + oldValue);
+        log.debug("Current newValue " + newValue);
     }
 
     /**

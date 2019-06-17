@@ -3,6 +3,8 @@ package fr.openclassrooms.vb.escapegameonline;
 import fr.openclassrooms.vb.util.Property;
 import org.apache.logging.log4j.LogManager;
 import fr.openclassrooms.vb.util.RandomUtil;
+import org.apache.logging.log4j.Logger;
+
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -12,11 +14,12 @@ public class Combination {
     private int combination [];
     private String operator [];
     private Display display = new Display();
+    private static Logger log = LogManager.getLogger(Combination.class);
 
     public Combination() {
         combinationLength = Property.getLengthOfCombination();
-        if(Property.isDebug()==true) {
-            LogManager.getLogger(Combination.class).debug("New Combination with length = " + this.combinationLength);
+        if(log.isDebugEnabled()) {
+            log.debug("New Combination with length = " + this.combinationLength);
         }
         this.combination = RandomUtil.generateCombination(this.combinationLength);
         this.operator = new String [this.combinationLength];
@@ -94,8 +97,8 @@ public class Combination {
         boolean stopScan=false;
         while (position < this.combinationLength) {
             try {
-                if(Property.isDebug()==true){
-                    LogManager.getLogger(Combination.class).debug("Current position ! " + position);
+                if(log.isDebugEnabled()){
+                    log.debug("Current position ! " + position);
                 }
                 this.setCombinationNumberAtPosition(position, -1);
                 while ( stopScan == false) {
@@ -104,28 +107,27 @@ public class Combination {
                     try{
                         this.setCombinationNumberAtPosition(position, scan.nextInt());
                         stopScan=this.checkCurrentNumber(position);
-                        if(Property.isDebug()==true){
-                            LogManager.getLogger(Combination.class).debug("Value at Current position ! "
-                                    + getCombination()[position]);
-                            LogManager.getLogger(Combination.class).debug("Value of stopScan ! " + stopScan);
+                        if(log.isDebugEnabled()){
+                            log.debug("Value at Current position ! " + getCombination()[position]);
+                           log.debug("Value of stopScan ! " + stopScan);
                         }
                     }
                     catch(ArrayIndexOutOfBoundsException e ){
-                        LogManager.getLogger(Combination.class).error("Your position is not define !"
-                                + e.getStackTrace());
+                        log.error("Your position is not define !" + e.getStackTrace());
                     }
+                    scan.close();
                 }
 
             } catch (InputMismatchException e) {
-                LogManager.getLogger(Combination.class).error("You must enter an Integer !");
+                log.error("You must enter an Integer !");
             } catch (Exception e) {
-                LogManager.getLogger(Combination.class).error("An error has occured !" + e.getStackTrace());
+                log.error("An error has occured !" + e.getStackTrace());
             }
             stopScan = false;
             position++;
-            if (Property.isDebug()==true){
-                LogManager.getLogger(Combination.class).debug("Value of position ! " + position);
-                LogManager.getLogger(Combination.class).debug("Value of stopScan ! " + stopScan);
+            if (log.isDebugEnabled()){
+                log.debug("Value of position ! " + position);
+                log.debug("Value of stopScan ! " + stopScan);
             }
         }
     }
@@ -159,8 +161,8 @@ public class Combination {
         boolean stopScan=false;
         while (position < this.combinationLength) {
             try {
-                if(Property.isDebug()==true){
-                    LogManager.getLogger(Combination.class).debug("Current position ! " + position);
+                if(log.isDebugEnabled()){
+                    log.debug("Current position ! " + position);
                 }
                 this.setOperatorAtPosition(position, null);
                 while ( stopScan == false) {
@@ -170,26 +172,25 @@ public class Combination {
                     try{
                         this.setOperatorAtPosition(position, scan.next());
                         stopScan=this.checkOperatorSymbolAtPosition(position);
-                        if(Property.isDebug()==true){
-                            LogManager.getLogger(Combination.class).debug("Value at Current position ! "
-                                    + getCombination()[position]);
-                            LogManager.getLogger(Combination.class).debug("Value of stopScan ! " + stopScan);
+                        if(log.isDebugEnabled()){
+                            log.debug("Value at Current position ! " + getCombination()[position]);
+                            log.debug("Value of stopScan ! " + stopScan);
                         }
                     }
                     catch(ArrayIndexOutOfBoundsException e ){
-                        LogManager.getLogger(Combination.class).error("Your position is not define !"
-                                + e.getStackTrace());
+                        log.error("Your position is not define !" + e.getStackTrace());
                     }
+                    scan.close();
                 }
 
             } catch (Exception e) {
-                LogManager.getLogger(Combination.class).error("An error has occured !" + e.getStackTrace());
+                log.error("An error has occured !" + e.getStackTrace());
             }
             stopScan = false;
             position++;
-            if (Property.isDebug()==true){
-                LogManager.getLogger(Combination.class).debug("Value of position ! " + position);
-                LogManager.getLogger(Combination.class).debug("Value of stopScan ! " + stopScan);
+            if (log.isDebugEnabled()){
+                log.debug("Value of position ! " + position);
+                log.debug("Value of stopScan ! " + stopScan);
             }
         }
     }
@@ -202,8 +203,8 @@ public class Combination {
      @param  combinationToCompare
      */
     public void compareCombination(Combination combinationToCompare){
-        if(Property.isDebug()==true){
-            LogManager.getLogger(Combination.class).debug("The Combination to find is : " );
+        if(log.isDebugEnabled()){
+            log.debug("The Combination to find is : " );
             display.displayCombination(combinationToCompare);
         }
         for (int i = 0; i < this.combinationLength; i++){
