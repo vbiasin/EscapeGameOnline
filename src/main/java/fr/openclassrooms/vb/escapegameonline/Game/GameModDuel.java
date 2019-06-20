@@ -7,11 +7,15 @@ public class GameModDuel extends GameMod{
 
     private static Logger log = LogManager.getLogger(GameModChallenger.class);
 
-    public GameModDuel() {
+    public GameModDuel(boolean forceModRules) {
+        super(forceModRules);
     }
 
     @Override
     public void runMod() {
         super.runMod();
+        if(devMod==true){
+            display.displayCombination(combinationComputer);
+        }
     }
 }

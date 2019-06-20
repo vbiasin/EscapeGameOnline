@@ -1,20 +1,24 @@
 package fr.openclassrooms.vb.escapegameonline.Game;
 
+import fr.openclassrooms.vb.escapegameonline.Constants;
 import fr.openclassrooms.vb.escapegameonline.Display;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import java.util.InputMismatchException;
-import java.util.Scanner;
 
 public class Game {
 
-    private  Display display = new Display();
-    private GameModChallenger challenger = new GameModChallenger();
-    private GameModDefender defender = new GameModDefender();
-    private GameModDuel duel = new GameModDuel();
+    private  Display display;
+    private GameModChallenger challenger;
+    private GameModDefender defender;
+    private GameModDuel duel;
     private static Logger log = LogManager.getLogger(Game.class);
 
-    public Game() {
+    public Game(boolean forceModRules) {
+        duel = new GameModDuel(forceModRules);
+        defender = new GameModDefender(forceModRules);
+        challenger = new GameModChallenger(forceModRules);
+        display = new Display();
     }
 
     /**
@@ -28,9 +32,7 @@ public class Game {
         while (isChoiceValid == false) {
             display.displayPlayMod();
             try {
-                Scanner scan = new Scanner(System.in);
-                choice = scan.nextInt();
-                scan.close();
+                choice = Constants.SCAN.nextInt();
                 switch (choice) {
                     case 1:
                         current_mod=1;
@@ -102,9 +104,7 @@ public class Game {
         display.displayEndGame();
         while(isChoiceValid==false){
             try {
-                Scanner scan = new Scanner(System.in);
-                choice = scan.nextInt();
-                scan.close();
+                choice = Constants.SCAN.nextInt();
             }
             catch (InputMismatchException e) {
                 log.error("You must enter 1 or 2 or 3 !" + e.getStackTrace());

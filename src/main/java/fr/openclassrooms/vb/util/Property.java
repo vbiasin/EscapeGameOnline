@@ -62,4 +62,9 @@ public class Property {
         return numberOfStrikes;
         }
 
+        public static boolean getDevMod(){
+            boolean devMod = Boolean.parseBoolean(getInstance().getProperty("devMod","false"));
+        return devMod;
+    }
+
 }

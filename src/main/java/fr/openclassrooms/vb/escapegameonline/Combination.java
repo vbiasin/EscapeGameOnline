@@ -4,9 +4,7 @@ import fr.openclassrooms.vb.util.Property;
 import org.apache.logging.log4j.LogManager;
 import fr.openclassrooms.vb.util.RandomUtil;
 import org.apache.logging.log4j.Logger;
-
 import java.util.InputMismatchException;
-import java.util.Scanner;
 
 public class Combination {
 
@@ -102,10 +100,9 @@ public class Combination {
                 }
                 this.setCombinationNumberAtPosition(position, -1);
                 while ( stopScan == false) {
-                    Scanner scan = new Scanner(System.in);
                     System.out.println("Choose the " + (position + 1) + " number of your combination !");
                     try{
-                        this.setCombinationNumberAtPosition(position, scan.nextInt());
+                        this.setCombinationNumberAtPosition(position, Constants.SCAN.nextInt());
                         stopScan=this.checkCurrentNumber(position);
                         if(log.isDebugEnabled()){
                             log.debug("Value at Current position ! " + getCombination()[position]);
@@ -115,8 +112,7 @@ public class Combination {
                     catch(ArrayIndexOutOfBoundsException e ){
                         log.error("Your position is not define !" + e.getStackTrace());
                     }
-                    scan.close();
-                }
+            }
 
             } catch (InputMismatchException e) {
                 log.error("You must enter an Integer !");
@@ -166,11 +162,10 @@ public class Combination {
                 }
                 this.setOperatorAtPosition(position, null);
                 while ( stopScan == false) {
-                    Scanner scan = new Scanner(System.in);
                     System.out.println("Please give the operator of the " + (position + 1)
                             + " number of your combination!");
                     try{
-                        this.setOperatorAtPosition(position, scan.next());
+                        this.setOperatorAtPosition(position, Constants.SCAN.next());
                         stopScan=this.checkOperatorSymbolAtPosition(position);
                         if(log.isDebugEnabled()){
                             log.debug("Value at Current position ! " + getCombination()[position]);
@@ -180,7 +175,6 @@ public class Combination {
                     catch(ArrayIndexOutOfBoundsException e ){
                         log.error("Your position is not define !" + e.getStackTrace());
                     }
-                    scan.close();
                 }
 
             } catch (Exception e) {

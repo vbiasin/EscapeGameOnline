@@ -52,4 +52,19 @@ public class Display {
         writeInConsole("Enter 2) if you want to go back to game menu !");
         writeInConsole("Enter 3) if you want to exit the application!");
     }
+
+    /**
+     * Display Player WIN.
+     */
+    public void displayPlayerWin(){
+        writeInConsole("PLAYER WIN !");
+    }
+
+    /**
+     * Display Computer WIN.
+     */
+    public void displayComputerWin(){
+        writeInConsole("COMPUTER WIN !");
+    }
+
 }

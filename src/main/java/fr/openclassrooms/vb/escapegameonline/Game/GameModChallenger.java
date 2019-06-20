@@ -9,7 +9,8 @@ public class GameModChallenger extends GameMod {
 
     private static Logger log = LogManager.getLogger(GameModChallenger.class);
 
-    public GameModChallenger() {
+    public GameModChallenger(boolean forceModRules) {
+        super(forceModRules);
     }
 
     @Override
@@ -22,17 +23,20 @@ public class GameModChallenger extends GameMod {
                 log.debug("The Combination is : " );
                 display.displayCombination(combinationComputer);
             }
+            if(devMod==true){
+                display.displayCombination(combinationComputer);
+            }
             combinationPlayer.setCombinationFromScanner();
             combinationComputer.compareCombination(combinationPlayer);
             display.displayCompartorOfCombination(combinationComputer);
             if(combinationComputer.isTrue()){
-                System.out.println("Player WIN");
+                display.displayPlayerWin();
                 numberOfStrike=-1;
             }
             numberOfStrike--;
         }
         if(numberOfStrike==0){
-            System.out.println("Computer WIN !");
+            display.displayComputerWin();
             display.displayCombination(combinationPlayer);
         }
     }
