@@ -100,7 +100,7 @@ public class Combination {
                 }
                 this.setCombinationNumberAtPosition(position, -1);
                 while ( stopScan == false) {
-                    System.out.println("Choose the " + (position + 1) + " number of your combination !");
+                    display.displayGiveNumber(position);
                     try{
                         this.setCombinationNumberAtPosition(position, Constants.SCAN.nextInt());
                         stopScan=this.checkCurrentNumber(position);
@@ -162,8 +162,7 @@ public class Combination {
                 }
                 this.setOperatorAtPosition(position, null);
                 while ( stopScan == false) {
-                    System.out.println("Please give the operator of the " + (position + 1)
-                            + " number of your combination!");
+                    display.displayGiveOperator(position);
                     try{
                         this.setOperatorAtPosition(position, Constants.SCAN.next());
                         stopScan=this.checkOperatorSymbolAtPosition(position);

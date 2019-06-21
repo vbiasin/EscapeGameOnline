@@ -10,15 +10,15 @@ public class Main {
     public static void main(String[] args) {
 
         Logger log = LogManager.getLogger(Main.class);
-            boolean forceModRules = false;
-            if (args!=null && args.length>0 && "DEVMOD".equals(args[0])){
-                forceModRules=true;
-            }
+
+        boolean forceModRules = false;
+        if (args!=null && args.length>0 && "DEVMOD".equals(args[0])){
+            forceModRules=true;
+        }
 
         Game game = new Game(forceModRules);
         boolean continu =true;
         int current_mod = game.getModFromScanner();
-        game.runGameFromValue(current_mod);
 
         while (continu==true){
             continu=game.continueFromScanner(current_mod);

@@ -40,6 +40,7 @@ public class Game {
                             log.debug("You choose the challenger mod !" );
                         }
                         isChoiceValid = true;
+                        //runGameFromValue(current_mod);
                         break;
                     case 2:
                         current_mod=2;
@@ -47,6 +48,7 @@ public class Game {
                             log.debug("You choose the defender mod !" );
                         }
                         isChoiceValid = true;
+                        //runGameFromValue(current_mod);
                         break;
 
                     case 3:
@@ -55,6 +57,7 @@ public class Game {
                             log.debug("You choose the duel mod !" );
                         }
                         isChoiceValid = true;
+                        //runGameFromValue(current_mod);
                         break;
 
                     case 4:
@@ -62,7 +65,7 @@ public class Game {
                         break;
 
                     default:
-                        System.out.println("You must enter 1 or 2 or 3 or 4!");
+                        display.displayDefault1To4();
 
                 }
             } catch (InputMismatchException e) {
@@ -128,7 +131,7 @@ public class Game {
                     break;
 
                 default:
-                    System.out.println("You must enter 1 or 2 or 3 !");
+                    display.displayDefault1To3();
 
             }
         }
