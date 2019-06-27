@@ -40,7 +40,6 @@ public class Game {
                             log.debug("You choose the challenger mod !" );
                         }
                         isChoiceValid = true;
-                        //runGameFromValue(current_mod);
                         break;
                     case 2:
                         current_mod=2;
@@ -48,7 +47,6 @@ public class Game {
                             log.debug("You choose the defender mod !" );
                         }
                         isChoiceValid = true;
-                        //runGameFromValue(current_mod);
                         break;
 
                     case 3:
@@ -57,7 +55,6 @@ public class Game {
                             log.debug("You choose the duel mod !" );
                         }
                         isChoiceValid = true;
-                        //runGameFromValue(current_mod);
                         break;
 
                     case 4:
@@ -75,6 +72,7 @@ public class Game {
                 System.out.println();
             }
         }
+        runGameFromValue(current_mod);
         return current_mod;
     }
 

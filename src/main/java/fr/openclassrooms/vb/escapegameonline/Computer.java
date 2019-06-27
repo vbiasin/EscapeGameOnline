@@ -44,10 +44,7 @@ public class Computer {
             LogManager.getLogger(Computer.class).error("Your position is not define !"+ e.getStackTrace());
         }
 
-        if(Constants.EQUALS.equals(playerCombination.getOperator()[position])){
-            newValue = oldValue;
-        }
-        else if(Constants.PLUS.equals(playerCombination.getOperator()[position])){
+        if(Constants.PLUS.equals(playerCombination.getOperator()[position])){
             this.max=Constants.MAX;
             this.min=oldValue;
         }
@@ -57,6 +54,10 @@ public class Computer {
         }
 
         newValue = (this.min + this.max) / 2;
+
+        if(Constants.EQUALS.equals(playerCombination.getOperator()[position])){
+            newValue = oldValue;
+        }
 
         try {
             this.getComputerCombination().setCombinationNumberAtPosition(position,newValue);

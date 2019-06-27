@@ -16,20 +16,20 @@ public class GameModChallenger extends GameMod {
     @Override
     public void runMod() {
         super.runMod();
-        combinationComputer = new Combination();
+        combinationComputerToFind = new Combination();
         while (numberOfStrike>0){
             if(log.isDebugEnabled()){
                 log.debug("The number of strikes is : " + Property.getNumberOfStrikes());
                 log.debug("The Combination is : " );
-                display.displayCombination(combinationComputer);
+                display.displayCombination(combinationComputerToFind);
             }
             if(devMod==true){
-                display.displayCombination(combinationComputer);
+                display.displayCombination(combinationComputerToFind);
             }
             combinationPlayer.setCombinationFromScanner();
-            combinationComputer.compareCombination(combinationPlayer);
-            display.displayCompartorOfCombination(combinationComputer);
-            if(combinationComputer.isTrue()){
+            combinationComputerToFind.compareCombination(combinationPlayer);
+            display.displayCompartorOfCombination(combinationComputerToFind);
+            if(combinationComputerToFind.isTrue()){
                 display.displayPlayerWin();
                 numberOfStrike=-1;
             }
@@ -37,7 +37,7 @@ public class GameModChallenger extends GameMod {
         }
         if(numberOfStrike==0){
             display.displayComputerWin();
-            display.displayCombination(combinationPlayer);
+            display.displayCombination(combinationComputerToFind);
         }
     }
 }
