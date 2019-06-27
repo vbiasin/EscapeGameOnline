@@ -83,11 +83,11 @@ public class Display {
      * Display give Number at a position
      */
     public void displayGiveOperator(int position){
-        writeInConsole("Please give the operator of the " + (position + 1) + " number of your combination!");
+        writeInConsoleln("Please give the operator of the " + (position + 1) + " number of your combination!");
     }
 
     public void displayDefault1To3(){
-        writeInConsole("You must enter 1 or 2 or 3 !");
+        writeInConsoleln("You must enter 1 or 2 or 3 !");
     }
 
     public void displayDefault1To4(){
@@ -95,6 +95,6 @@ public class Display {
     }
 
     public void displayDraw(){
-        writeInConsole("DRAW ! NO ONE WIN");
+        writeInConsoleln("DRAW ! NO ONE WIN");
     }
 }

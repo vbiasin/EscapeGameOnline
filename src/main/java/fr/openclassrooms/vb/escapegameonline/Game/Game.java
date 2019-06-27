@@ -88,7 +88,7 @@ public class Game {
         else if (value==2){
             defender.runMod();
         }
-        else {
+        else if(value==3) {
             duel.runMod();
         }
     }
