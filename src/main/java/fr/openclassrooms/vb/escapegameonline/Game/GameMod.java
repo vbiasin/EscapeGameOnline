@@ -15,7 +15,7 @@ public abstract class GameMod {
 
     public GameMod(boolean forceModRules) {
         devMod=Property.getDevMod();
-        if(forceModRules==true){
+        if(forceModRules){
             devMod=true;
         }
     }

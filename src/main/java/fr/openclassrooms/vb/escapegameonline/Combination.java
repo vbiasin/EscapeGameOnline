@@ -99,7 +99,7 @@ public class Combination {
                     log.debug("Current position ! " + position);
                 }
                 this.setCombinationNumberAtPosition(position, -1);
-                while ( stopScan == false) {
+                while (!stopScan) {
                     display.displayGiveNumber(position);
                     try{
                         this.setCombinationNumberAtPosition(position, Constants.SCAN.nextInt());
@@ -161,7 +161,7 @@ public class Combination {
                     log.debug("Current position ! " + position);
                 }
                 this.setOperatorAtPosition(position, null);
-                while ( stopScan == false) {
+                while (!stopScan) {
                     display.displayGiveOperator(position);
                     try{
                         this.setOperatorAtPosition(position, Constants.SCAN.next());
@@ -222,7 +222,7 @@ public class Combination {
     public boolean isTrue (){
         boolean check =true;
         for(int i=0; i<this.combinationLength; i++){
-            if(this.getOperator()[i].equals(Constants.EQUALS)==false){
+            if(!this.getOperator()[i].equals(Constants.EQUALS)){
                 check=false;
                 break;
             }

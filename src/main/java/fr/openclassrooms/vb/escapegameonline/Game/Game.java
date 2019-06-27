@@ -29,7 +29,7 @@ public class Game {
          boolean isChoiceValid = false;
          int current_mod = 0;
          int choice = 0;
-        while (isChoiceValid == false) {
+        while (!isChoiceValid) {
             display.displayPlayMod();
             try {
                 choice = Constants.SCAN.nextInt();
@@ -103,7 +103,7 @@ public class Game {
         boolean next = true;
         int choice = 0;
         display.displayEndGame();
-        while(isChoiceValid==false){
+        while(!isChoiceValid){
             try {
                 choice = Constants.SCAN.nextInt();
             }

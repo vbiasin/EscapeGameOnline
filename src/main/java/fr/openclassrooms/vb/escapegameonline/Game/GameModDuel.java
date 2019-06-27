@@ -24,7 +24,7 @@ public class GameModDuel extends GameMod{
         Computer computer = new Computer();
         computer.setComputerCombination(new Combination());
         while(continu){
-            if(devMod==true){
+            if(devMod){
                 display.displayCombination(combinationComputer);
             }
             if(log.isDebugEnabled()){
@@ -38,11 +38,11 @@ public class GameModDuel extends GameMod{
             display.displayCompartorOfCombination(combinationComputerToFind);
             display.displayCombination(computer.getComputerCombination());
             combinationPlayerToFind.setOperatorTabFromScanner();
-            if(combinationComputerToFind.isTrue() && combinationPlayerToFind.isTrue()==false){
+            if(combinationComputerToFind.isTrue() && !combinationPlayerToFind.isTrue()){
                 display.displayPlayerWin();
                 continu=false;
             }
-            if(combinationPlayerToFind.isTrue() && combinationComputerToFind.isTrue()==false){
+            if(combinationPlayerToFind.isTrue() && !combinationComputerToFind.isTrue()){
                 display.displayComputerWin();
                 continu=false;
             }

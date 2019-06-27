@@ -23,7 +23,7 @@ public class GameModChallenger extends GameMod {
                 log.debug("The Combination is : " );
                 display.displayCombination(combinationComputerToFind);
             }
-            if(devMod==true){
+            if(devMod){
                 display.displayCombination(combinationComputerToFind);
             }
             combinationPlayer.setCombinationFromScanner();

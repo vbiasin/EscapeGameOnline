@@ -27,7 +27,7 @@ public class GameModDefender extends GameMod {
                 log.debug("The Combination is : " );
                 display.displayCombination(computer.getComputerCombination());
             }
-            if(devMod==true){
+            if(devMod){
                 display.displayCombination(combinationPlayer);
             }
             display.displayCombination(computer.getComputerCombination());
