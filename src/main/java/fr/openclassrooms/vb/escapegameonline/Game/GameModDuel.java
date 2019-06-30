@@ -2,7 +2,6 @@ package fr.openclassrooms.vb.escapegameonline.Game;
 
 import fr.openclassrooms.vb.escapegameonline.Combination;
 import fr.openclassrooms.vb.escapegameonline.Computer;
-import fr.openclassrooms.vb.util.Property;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 

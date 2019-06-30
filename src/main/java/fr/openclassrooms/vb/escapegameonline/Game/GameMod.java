@@ -10,7 +10,7 @@ public abstract class GameMod {
     protected Combination combinationComputerToFind;
     protected Combination combinationPlayer = new Combination();
     protected Display display = new Display();
-    protected int numberOfStrike = Property.getNumberOfStrikes();
+    protected int numberOfStrike;
     protected boolean devMod ;
 
     public GameMod(boolean forceModRules) {
@@ -21,9 +21,7 @@ public abstract class GameMod {
     }
 
     public void runMod(){
-
-
-
+        numberOfStrike = Property.getNumberOfStrikes();
     }
 
 }

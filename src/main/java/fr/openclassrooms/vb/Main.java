@@ -14,10 +14,11 @@ public class Main {
 
         Game game = new Game(forceModRules);
         boolean continu =true;
-        int current_mod = game.getModFromScanner();
+
+        game.getModFromScanner();
 
         while (continu){
-            continu=game.continueFromScanner(current_mod);
+            continu=game.continueFromScanner();
         }
         Constants.SCAN.close();
     }
