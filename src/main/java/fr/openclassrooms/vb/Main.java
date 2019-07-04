@@ -1,7 +1,7 @@
 package fr.openclassrooms.vb;
 
 import fr.openclassrooms.vb.escapegameonline.Constants;
-import fr.openclassrooms.vb.escapegameonline.Game.Game;
+import fr.openclassrooms.vb.escapegameonline.game.Game;
 
 public class Main {
 

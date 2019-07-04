@@ -50,9 +50,9 @@ public class Combination {
      @return check
      */
     public boolean checkCurrentNumber(int position) throws ArrayIndexOutOfBoundsException {
-        boolean check = true;
-        if(this.getCombination()[position]<Constants.MIN || this.getCombination()[position]>Constants.MAX){
-            check = false;
+        boolean check = false;
+        if(this.getCombination()[position]>=Constants.MIN && this.getCombination()[position]<=Constants.MAX){
+            check = true;
         }
         return check;
     }

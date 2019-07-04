@@ -2165,3 +2165,109 @@ DEBUG | 2019-06-30 09:53:33 | [main] escapegameonline.Combination (Combination.j
 DEBUG | 2019-06-30 09:53:33 | [main] escapegameonline.Combination (Combination.java:125) - Value of position ! 5
 DEBUG | 2019-06-30 09:53:33 | [main] escapegameonline.Combination (Combination.java:126) - Value of stopScan ! false
 DEBUG | 2019-06-30 09:53:33 | [main] escapegameonline.Combination (Combination.java:200) - The Combination to find is : 
+DEBUG | 2019-07-04 18:15:44 | [main] escapegameonline.Combination (Combination.java:20) - New Combination with length = 5
+DEBUG | 2019-07-04 18:15:44 | [main] escapegameonline.Combination (Combination.java:20) - New Combination with length = 5
+DEBUG | 2019-07-04 18:15:44 | [main] escapegameonline.Combination (Combination.java:20) - New Combination with length = 5
+DEBUG | 2019-07-04 18:15:47 | [main] Game.Game (Game.java:47) - You choose the defender mod !
+DEBUG | 2019-07-04 18:15:48 | [main] escapegameonline.Combination (Combination.java:20) - New Combination with length = 5
+DEBUG | 2019-07-04 18:15:48 | [main] escapegameonline.Combination (Combination.java:99) - Current position ! 0
+DEBUG | 2019-07-04 18:15:52 | [main] escapegameonline.Combination (Combination.java:108) - Value at Current position ! 1
+DEBUG | 2019-07-04 18:15:52 | [main] escapegameonline.Combination (Combination.java:109) - Value of stopScan ! false
+DEBUG | 2019-07-04 18:15:53 | [main] escapegameonline.Combination (Combination.java:108) - Value at Current position ! 2
+DEBUG | 2019-07-04 18:15:53 | [main] escapegameonline.Combination (Combination.java:109) - Value of stopScan ! false
+DEBUG | 2019-07-04 18:15:54 | [main] escapegameonline.Combination (Combination.java:108) - Value at Current position ! 3
+DEBUG | 2019-07-04 18:15:54 | [main] escapegameonline.Combination (Combination.java:109) - Value of stopScan ! false
+DEBUG | 2019-07-04 18:15:58 | [main] escapegameonline.Combination (Combination.java:108) - Value at Current position ! 777777777
+DEBUG | 2019-07-04 18:15:58 | [main] escapegameonline.Combination (Combination.java:109) - Value of stopScan ! true
+DEBUG | 2019-07-04 18:15:58 | [main] escapegameonline.Combination (Combination.java:125) - Value of position ! 1
+DEBUG | 2019-07-04 18:15:58 | [main] escapegameonline.Combination (Combination.java:126) - Value of stopScan ! false
+DEBUG | 2019-07-04 18:15:58 | [main] escapegameonline.Combination (Combination.java:99) - Current position ! 1
+DEBUG | 2019-07-04 18:18:13 | [main] escapegameonline.Combination (Combination.java:20) - New Combination with length = 5
+DEBUG | 2019-07-04 18:18:13 | [main] escapegameonline.Combination (Combination.java:20) - New Combination with length = 5
+DEBUG | 2019-07-04 18:18:13 | [main] escapegameonline.Combination (Combination.java:20) - New Combination with length = 5
+DEBUG | 2019-07-04 18:18:16 | [main] Game.Game (Game.java:47) - You choose the defender mod !
+DEBUG | 2019-07-04 18:18:16 | [main] escapegameonline.Combination (Combination.java:20) - New Combination with length = 5
+DEBUG | 2019-07-04 18:18:16 | [main] escapegameonline.Combination (Combination.java:99) - Current position ! 0
+DEBUG | 2019-07-04 18:18:19 | [main] escapegameonline.Combination (Combination.java:108) - Value at Current position ! 1
+DEBUG | 2019-07-04 18:18:19 | [main] escapegameonline.Combination (Combination.java:109) - Value of stopScan ! true
+DEBUG | 2019-07-04 18:18:19 | [main] escapegameonline.Combination (Combination.java:125) - Value of position ! 1
+DEBUG | 2019-07-04 18:18:19 | [main] escapegameonline.Combination (Combination.java:126) - Value of stopScan ! false
+DEBUG | 2019-07-04 18:18:19 | [main] escapegameonline.Combination (Combination.java:99) - Current position ! 1
+DEBUG | 2019-07-04 18:18:22 | [main] escapegameonline.Combination (Combination.java:108) - Value at Current position ! 2
+DEBUG | 2019-07-04 18:18:22 | [main] escapegameonline.Combination (Combination.java:109) - Value of stopScan ! true
+DEBUG | 2019-07-04 18:18:22 | [main] escapegameonline.Combination (Combination.java:125) - Value of position ! 2
+DEBUG | 2019-07-04 18:18:22 | [main] escapegameonline.Combination (Combination.java:126) - Value of stopScan ! false
+DEBUG | 2019-07-04 18:18:22 | [main] escapegameonline.Combination (Combination.java:99) - Current position ! 2
+DEBUG | 2019-07-04 18:18:23 | [main] escapegameonline.Combination (Combination.java:108) - Value at Current position ! 3
+DEBUG | 2019-07-04 18:18:23 | [main] escapegameonline.Combination (Combination.java:109) - Value of stopScan ! true
+DEBUG | 2019-07-04 18:18:23 | [main] escapegameonline.Combination (Combination.java:125) - Value of position ! 3
+DEBUG | 2019-07-04 18:18:23 | [main] escapegameonline.Combination (Combination.java:126) - Value of stopScan ! false
+DEBUG | 2019-07-04 18:18:23 | [main] escapegameonline.Combination (Combination.java:99) - Current position ! 3
+DEBUG | 2019-07-04 18:18:27 | [main] escapegameonline.Combination (Combination.java:108) - Value at Current position ! 7777777
+DEBUG | 2019-07-04 18:18:27 | [main] escapegameonline.Combination (Combination.java:109) - Value of stopScan ! true
+DEBUG | 2019-07-04 18:18:27 | [main] escapegameonline.Combination (Combination.java:125) - Value of position ! 4
+DEBUG | 2019-07-04 18:18:27 | [main] escapegameonline.Combination (Combination.java:126) - Value of stopScan ! false
+DEBUG | 2019-07-04 18:18:27 | [main] escapegameonline.Combination (Combination.java:99) - Current position ! 4
+DEBUG | 2019-07-04 18:18:45 | [main] escapegameonline.Combination (Combination.java:108) - Value at Current position ! 6
+DEBUG | 2019-07-04 18:18:45 | [main] escapegameonline.Combination (Combination.java:109) - Value of stopScan ! true
+DEBUG | 2019-07-04 18:18:45 | [main] escapegameonline.Combination (Combination.java:125) - Value of position ! 5
+DEBUG | 2019-07-04 18:18:45 | [main] escapegameonline.Combination (Combination.java:126) - Value of stopScan ! false
+DEBUG | 2019-07-04 18:18:45 | [main] Game.GameModDefender (GameModDefender.java:26) - The number of strikes is : 15
+DEBUG | 2019-07-04 18:18:45 | [main] Game.GameModDefender (GameModDefender.java:27) - The Combination is : 
+DEBUG | 2019-07-04 18:18:45 | [main] escapegameonline.Combination (Combination.java:161) - Current position ! 0
+DEBUG | 2019-07-04 18:22:21 | [main] escapegameonline.Combination (Combination.java:20) - New Combination with length = 5
+DEBUG | 2019-07-04 18:22:21 | [main] escapegameonline.Combination (Combination.java:20) - New Combination with length = 5
+DEBUG | 2019-07-04 18:22:21 | [main] escapegameonline.Combination (Combination.java:20) - New Combination with length = 5
+DEBUG | 2019-07-04 18:22:22 | [main] Game.Game (Game.java:47) - You choose the defender mod !
+DEBUG | 2019-07-04 18:22:22 | [main] escapegameonline.Combination (Combination.java:20) - New Combination with length = 5
+DEBUG | 2019-07-04 18:22:22 | [main] escapegameonline.Combination (Combination.java:99) - Current position ! 0
+DEBUG | 2019-07-04 18:22:24 | [main] escapegameonline.Combination (Combination.java:108) - Value at Current position ! 444
+DEBUG | 2019-07-04 18:22:24 | [main] escapegameonline.Combination (Combination.java:109) - Value of stopScan ! true
+DEBUG | 2019-07-04 18:22:24 | [main] escapegameonline.Combination (Combination.java:125) - Value of position ! 1
+DEBUG | 2019-07-04 18:22:24 | [main] escapegameonline.Combination (Combination.java:126) - Value of stopScan ! false
+DEBUG | 2019-07-04 18:22:24 | [main] escapegameonline.Combination (Combination.java:99) - Current position ! 1
+DEBUG | 2019-07-04 18:24:05 | [main] escapegameonline.Combination (Combination.java:108) - Value at Current position ! 666
+DEBUG | 2019-07-04 18:24:05 | [main] escapegameonline.Combination (Combination.java:109) - Value of stopScan ! true
+DEBUG | 2019-07-04 18:24:05 | [main] escapegameonline.Combination (Combination.java:125) - Value of position ! 2
+DEBUG | 2019-07-04 18:24:05 | [main] escapegameonline.Combination (Combination.java:126) - Value of stopScan ! false
+DEBUG | 2019-07-04 18:24:05 | [main] escapegameonline.Combination (Combination.java:99) - Current position ! 2
+DEBUG | 2019-07-04 18:24:08 | [main] escapegameonline.Combination (Combination.java:108) - Value at Current position ! 3
+DEBUG | 2019-07-04 18:24:08 | [main] escapegameonline.Combination (Combination.java:109) - Value of stopScan ! true
+DEBUG | 2019-07-04 18:24:08 | [main] escapegameonline.Combination (Combination.java:125) - Value of position ! 3
+DEBUG | 2019-07-04 18:24:08 | [main] escapegameonline.Combination (Combination.java:126) - Value of stopScan ! false
+DEBUG | 2019-07-04 18:24:08 | [main] escapegameonline.Combination (Combination.java:99) - Current position ! 3
+DEBUG | 2019-07-04 18:24:10 | [main] escapegameonline.Combination (Combination.java:108) - Value at Current position ! 3
+DEBUG | 2019-07-04 18:24:10 | [main] escapegameonline.Combination (Combination.java:109) - Value of stopScan ! true
+DEBUG | 2019-07-04 18:24:10 | [main] escapegameonline.Combination (Combination.java:125) - Value of position ! 4
+DEBUG | 2019-07-04 18:24:10 | [main] escapegameonline.Combination (Combination.java:126) - Value of stopScan ! false
+DEBUG | 2019-07-04 18:24:10 | [main] escapegameonline.Combination (Combination.java:99) - Current position ! 4
+DEBUG | 2019-07-04 18:24:11 | [main] escapegameonline.Combination (Combination.java:108) - Value at Current position ! 3
+DEBUG | 2019-07-04 18:24:11 | [main] escapegameonline.Combination (Combination.java:109) - Value of stopScan ! true
+DEBUG | 2019-07-04 18:24:11 | [main] escapegameonline.Combination (Combination.java:125) - Value of position ! 5
+DEBUG | 2019-07-04 18:24:11 | [main] escapegameonline.Combination (Combination.java:126) - Value of stopScan ! false
+DEBUG | 2019-07-04 18:24:11 | [main] Game.GameModDefender (GameModDefender.java:26) - The number of strikes is : 15
+DEBUG | 2019-07-04 18:24:11 | [main] Game.GameModDefender (GameModDefender.java:27) - The Combination is : 
+DEBUG | 2019-07-04 18:24:11 | [main] escapegameonline.Combination (Combination.java:161) - Current position ! 0
+DEBUG | 2019-07-04 18:25:38 | [main] escapegameonline.Combination (Combination.java:20) - New Combination with length = 5
+DEBUG | 2019-07-04 18:25:38 | [main] escapegameonline.Combination (Combination.java:20) - New Combination with length = 5
+DEBUG | 2019-07-04 18:25:38 | [main] escapegameonline.Combination (Combination.java:20) - New Combination with length = 5
+DEBUG | 2019-07-04 18:25:41 | [main] Game.Game (Game.java:47) - You choose the defender mod !
+DEBUG | 2019-07-04 18:25:41 | [main] escapegameonline.Combination (Combination.java:20) - New Combination with length = 5
+DEBUG | 2019-07-04 18:25:41 | [main] escapegameonline.Combination (Combination.java:99) - Current position ! 0
+DEBUG | 2019-07-04 18:25:44 | [main] escapegameonline.Combination (Combination.java:108) - Value at Current position ! 1
+DEBUG | 2019-07-04 18:25:44 | [main] escapegameonline.Combination (Combination.java:109) - Value of stopScan ! true
+DEBUG | 2019-07-04 18:25:44 | [main] escapegameonline.Combination (Combination.java:125) - Value of position ! 1
+DEBUG | 2019-07-04 18:25:44 | [main] escapegameonline.Combination (Combination.java:126) - Value of stopScan ! false
+DEBUG | 2019-07-04 18:25:44 | [main] escapegameonline.Combination (Combination.java:99) - Current position ! 1
+DEBUG | 2019-07-04 18:25:47 | [main] escapegameonline.Combination (Combination.java:108) - Value at Current position ! 2
+DEBUG | 2019-07-04 18:25:47 | [main] escapegameonline.Combination (Combination.java:109) - Value of stopScan ! true
+DEBUG | 2019-07-04 18:25:47 | [main] escapegameonline.Combination (Combination.java:125) - Value of position ! 2
+DEBUG | 2019-07-04 18:25:47 | [main] escapegameonline.Combination (Combination.java:126) - Value of stopScan ! false
+DEBUG | 2019-07-04 18:25:47 | [main] escapegameonline.Combination (Combination.java:99) - Current position ! 2
+DEBUG | 2019-07-04 18:25:49 | [main] escapegameonline.Combination (Combination.java:108) - Value at Current position ! 3
+DEBUG | 2019-07-04 18:25:49 | [main] escapegameonline.Combination (Combination.java:109) - Value of stopScan ! true
+DEBUG | 2019-07-04 18:25:49 | [main] escapegameonline.Combination (Combination.java:125) - Value of position ! 3
+DEBUG | 2019-07-04 18:25:49 | [main] escapegameonline.Combination (Combination.java:126) - Value of stopScan ! false
+DEBUG | 2019-07-04 18:25:49 | [main] escapegameonline.Combination (Combination.java:99) - Current position ! 3
+DEBUG | 2019-07-04 18:25:54 | [main] escapegameonline.Combination (Combination.java:108) - Value at Current position ! 77777
+DEBUG | 2019-07-04 18:25:54 | [main] escapegameonline.Combination (Combination.java:109) - Value of stopScan ! false

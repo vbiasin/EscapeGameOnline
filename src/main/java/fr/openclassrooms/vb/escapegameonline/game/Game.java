@@ -1,4 +1,4 @@
-package fr.openclassrooms.vb.escapegameonline.Game;
+package fr.openclassrooms.vb.escapegameonline.game;
 
 import fr.openclassrooms.vb.escapegameonline.Constants;
 import fr.openclassrooms.vb.escapegameonline.Display;
