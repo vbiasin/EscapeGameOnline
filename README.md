@@ -41,3 +41,12 @@ CONTENU:
 	-util (Randomutil.java,Property)
 Fichiers importants:
 README.md et config.properties
+
+
+CONCEPT TECHNIQUES:
+==============================
+Héritage
+Maven
+Gestion de log avec log4j
+Tests avec JUnit
+lire le fichier config.properties et exploiter les valeurs de ce dernier.
