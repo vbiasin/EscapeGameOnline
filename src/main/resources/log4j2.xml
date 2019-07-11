@@ -14,8 +14,8 @@
         </Console>
     </Appenders>
     <Loggers>
-        <Logger name="fr.openclassrooms.vb.util" level="debug" />
-        <Logger name="fr.openclassrooms.vb.escapegameonline" level="debug" />
+        <Logger name="fr.openclassrooms.vb.util" level="error" />
+        <Logger name="fr.openclassrooms.vb.escapegameonline" level="error" />
         <Logger name="fr.openclassrooms.vb.Main" level="error" />
         <Root level="info">
             <AppenderRef ref="STDOUT" />
